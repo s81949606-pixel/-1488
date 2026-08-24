@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b0f1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SUPRA MAGNATE">
+<meta name="description" content="SUPRA MAGNATE — мобильный симулятор магната: бизнесы, тачки, дома, крипта и биткоин.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="boot" class="boot">
+  <div class="boot-logo">
+    <svg viewBox="0 0 120 120" width="96" height="96" aria-hidden="true">
+      <defs>
+        <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffd76a"/><stop offset="1" stop-color="#f28b1f"/>
+        </linearGradient>
+      </defs>
+      <circle cx="60" cy="60" r="56" fill="url(#bg1)"/>
+      <circle cx="60" cy="60" r="56" fill="none" stroke="#fff3c4" stroke-width="3" opacity=".6"/>
+      <text x="60" y="78" text-anchor="middle" font-size="52" font-family="Arial Black, Arial, sans-serif" fill="#3a2405">$</text>
+    </svg>
+    <div class="boot-title">SUPRA MAGNATE</div>
+    <div class="boot-sub">симулятор магната</div>
+    <div class="boot-bar"><i></i></div>
+  </div>
+</div>
+
+<div id="app" class="app" hidden>
+  <header class="hud">
+    <div class="hud-row">
+      <div class="hud-avatar" id="hudAvatar"></div>
+      <div class="hud-main">
+        <div class="hud-cash"><span id="hudCash">0</span><span class="hud-cur">$</span></div>
+        <div class="hud-sub">
+          <span class="chip chip-in" id="hudIncome">0/сек</span>
+          <span class="chip chip-btc" id="hudBtc">₿ 0.0000</span>
+        </div>
+      </div>
+      <button class="hud-btn" id="btnBoost" data-act="boost" title="Буст">
+        <span id="boostLabel">x2</span>
+      </button>
+    </div>
+    <div class="hud-level">
+      <div class="lvl-badge"><span id="hudLevel">1</span></div>
+      <div class="lvl-bar"><i id="hudXp" style="width:0%"></i></div>
+      <div class="lvl-info">
+        <span id="hudStatus">Новичок</span>
+        <span id="hudNet">Активы: $0</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <nav class="tabbar" id="tabbar"></nav>
+</div>
+
+<div class="fx-layer" id="fxLayer"></div>
+<div class="toasts" id="toasts"></div>
+<div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-grab"></div>
+  <div class="sheet-body" id="sheetBody"></div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

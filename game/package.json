@@ -1,0 +1,11 @@
+{
+  "name": "supra-magnate",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Мобильный симулятор магната: бизнесы, тачки, дома, крипта и биткоин. SVG-арт + фото.",
+  "scripts": {
+    "test": "node --test tests/economy.test.mjs tests/smoke.test.mjs",
+    "serve": "python3 -m http.server 8000 --bind 0.0.0.0"
+  }
+}
